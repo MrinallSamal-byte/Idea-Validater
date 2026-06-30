@@ -1,12 +1,26 @@
 # Reality Check
 
-*The advisor who's seen a thousand ideas and isn't impressed easily - living inside your AI.*
+*The advisor who's seen a thousand ideas and isn't impressed easily — living inside your AI.*
 
-Most assistants agree with whatever you propose. You say "I want to build X," they say "Great idea!" That feels nice and tells you nothing. Reality Check does the opposite: it pressure-tests the idea, looks up what's really happening in the market, names the ways it could fail, and tells you what to do next. It's direct by design, and - unlike a skill you have to remember to summon - it's **on by default**.
+Most assistants agree with whatever you propose. You say "I want to build X," they say "Great idea!" That feels nice and tells you nothing. Reality Check does the opposite: it pressure-tests the idea, looks up what's really happening in the market, names the ways it could fail, and tells you what to do next. It's direct by design, and — unlike a tool you have to remember to summon — it's **on by default**.
+
+## Works with
+
+| Host | Install | Gets |
+|------|---------|------|
+| Claude (Cowork desktop) | Add from repository in the plugin UI | Always-on hook **+ 8 skills** |
+| Claude Code | `/plugin marketplace add` + `/plugin install` | Always-on hook **+ 8 skills** |
+| Codex / OpenCode / Swival / CodeWhale | Auto-reads `AGENTS.md` | Always-on ruleset |
+| Cursor · Windsurf · Cline | Copy the matching rules file | Always-on ruleset |
+| GitHub Copilot (editor) | Reads `.github/copilot-instructions.md` | Always-on ruleset |
+| Kiro | Copy to steering | Always-on ruleset |
+| Gemini / Antigravity | Install extension or drop ruleset in `.agents/rules/` | Always-on ruleset |
+
+Full mapping: [`docs/agent-portability.md`](docs/agent-portability.md).
 
 ## On by default
 
-The reason today's AI can't validate a real idea is that it agrees with you *automatically*. Reality Check flips that default. Whenever you share an idea, plan, opinion, or ask "is this any good?", it runs the honesty protocol instead of cheerleading - without being asked. Casual chat and ordinary tasks are left alone; it only engages when there's actually something to evaluate. Don't want it on right now? Say "reality check off" (or `lite` / `full` / `ultra`).
+The reason today's AI can't validate a real idea is that it agrees with you *automatically*. Reality Check flips that default. Whenever you share an idea, plan, opinion, or ask "is this any good?", it runs the honesty protocol instead of cheerleading — without being asked. Casual chat and ordinary tasks are left alone; it only engages when there's actually something to evaluate. Don't want it on right now? Say "reality check off" (or `lite` / `full` / `ultra`).
 
 ## The Reality Check Protocol
 
@@ -35,32 +49,26 @@ Reality Check:
 > **The strongest case against:** this is a feature, not a company. The platforms that own the meeting own the audio, ship summaries for free, and you'd be paying to acquire users they reach for nothing.
 > **Verdict: Reshape.** The summary is commoditized. If there's a business here it's in what happens *after* the summary - and that's the part you haven't defined.
 
+More in [`examples/`](examples/).
+
 ## Intensity
 
-`off` (stand down) - `lite` (gentle, one key risk) - `full` (the protocol, direct - default) - `ultra` (assume it's flawed until proven; maximum scrutiny). Just say "go easier" or "go harder."
+`off` (stand down) · `lite` (gentle, one key risk) · `full` (the protocol, direct — default) · `ultra` (assume it's flawed until proven; maximum scrutiny). Just say "go easier" or "go harder."
 
-## What it does
+## The skills (Claude)
 
-Reality Check adds an always-on honesty hook plus eight skills:
+On Claude, Reality Check adds an always-on honesty hook plus eight skills:
 
 | Skill | Triggers on | What it does |
 |-------|-------------|--------------|
-| **validate-idea** | "is this a good idea", "validate this", "be honest about", "stress-test", "poke holes" | The core engine. Scores the idea against a transparent rubric, separates fact from assumption, and delivers an honest verdict with the strongest case *against* the idea. |
-| **market-scan** | "who else does this", "is the market real", "competitors", "market size" | Researches real competitors, substitutes, market size and prior attempts using live web search, then reports what it actually found (and what it couldn't verify). |
-| **pre-mortem** | "what could go wrong", "risks", "why might this fail", "failure modes" | Runs a structured pre-mortem: imagines the project has already failed and works backward through the most likely causes. |
-| **direction-roadmap** | "what should I do next", "how do I move this forward", "roadmap", "next steps" | Turns a validated idea into a sequenced plan: the riskiest assumption to test first, the cheapest test for it, and a staged path. |
-| **pitch-critique** | "review my pitch", "critique this proposal", "feedback on my deck" | Critiques a pitch, proposal, or deck the way a skeptical investor or reviewer would, line by line. |
-| **compare-ideas** | "which should I do", "compare these", "rank these ideas", "help me pick" | Scores several competing ideas on the same rubric, ranks them, and commits to a single "do this first" instead of calling it a tie. |
-| **idea-journal** | "log this idea", "track my ideas", "show my journal", "what did I conclude about X" | Keeps a durable markdown journal of ideas, verdicts, and updates in your project folder so progress survives across sessions - and surfaces patterns across your ideas over time. |
-| **reality-check-mode** | "reality check off", "go easier", "go harder", "ultra mode", "tone it down" | Sets how blunt the always-on behavior is: off / lite / full / ultra. Lowering intensity softens the delivery, never the honesty. |
-
-## How it stays honest
-
-The plugin's whole point is to resist sycophancy. Every skill follows the same rules: praise must be earned and specific, every claim is labeled as fact / assumption / unknown, the strongest counter-argument is always stated, and the verdict is never softened to spare feelings. It is encouraging only where the evidence actually warrants it.
-
-## Working style
-
-By default the feedback is blunt - it leads with the problems, because that's where the value is. It is never cruel or dismissive: the goal is a sharper idea, not a discouraged founder. If you want it to ease off, just say "go easier" and it will keep the substance while softening the delivery.
+| **validate-idea** | "is this a good idea", "stress-test", "poke holes" | Core engine. Scores against a rubric, splits fact from assumption, commits to a verdict. |
+| **market-scan** | "who else does this", "is the market real" | Live competitor/market research; reports what it found and what it couldn't verify. |
+| **pre-mortem** | "what could go wrong", "why might this fail" | Imagines the project already failed and works back to the likely causes. |
+| **direction-roadmap** | "what should I do next", "roadmap" | Sequences the cheapest test of the riskiest assumption first. |
+| **pitch-critique** | "review my pitch", "critique this deck" | Investor-grade teardown with line edits. |
+| **compare-ideas** | "which should I do", "rank these" | Scores several ideas on one rubric and picks one. |
+| **idea-journal** | "log this idea", "show my journal" | Durable verdict log in your project folder; surfaces patterns over time. |
+| **reality-check-mode** | "go easier", "ultra mode", "reality check off" | Sets intensity: off / lite / full / ultra. |
 
 ## Install
 
@@ -72,7 +80,7 @@ Customize → the **+** next to personal plugins → **Create plugin and add mar
 https://github.com/MrinallSamal-byte/Idea-Validater
 ```
 
-Then enable the **reality-check** plugin. The always-on behavior starts immediately.
+Enable **reality-check**. The always-on behavior starts immediately.
 
 ### Claude Code
 
@@ -83,20 +91,41 @@ Then enable the **reality-check** plugin. The always-on behavior starts immediat
 
 (Send the two commands as separate messages.)
 
-### Drop-in `.plugin` file
+### Codex, OpenCode, Swival, CodeWhale, VS Code (Codex)
 
-If you just want to load it directly, build the bundle and accept it in the app:
+These auto-read `AGENTS.md` from the repo root — run the agent from a checkout of
+this repo, or copy `AGENTS.md` into your project. For a global rule, copy it to
+the host's global agents file (e.g. `~/.codex/AGENTS.md`).
+
+### Cursor · Windsurf · Cline · GitHub Copilot · Kiro
+
+Copy the matching rules file into your project (or the host's global rules dir):
+
+```
+.cursor/rules/reality-check.mdc
+.windsurf/rules/reality-check.md
+.clinerules/reality-check.md
+.github/copilot-instructions.md
+.kiro/steering/reality-check.md      # or ~/.kiro/steering/ for global
+```
+
+### Gemini / Antigravity
+
+```
+gemini extensions install https://github.com/MrinallSamal-byte/Idea-Validater
+```
+
+Or drop the ruleset into `.agents/rules/` for always-on context.
+
+### Drop-in `.plugin` (Claude)
 
 ```
 cd Idea-Validater && zip -r /tmp/reality-check.plugin . -x "*.git*" -x "*.DS_Store"
 ```
 
-On any host: if plugin hooks aren't run, the always-on layer stays quiet and the
-skills still work on request.
+On any host: if plugin hooks aren't run, the always-on layer stays quiet and the skills still work on request.
 
 ## Usage
-
-Ask Claude things like:
 
 - "Be honest — is this startup idea actually any good?"
 - "Stress-test my plan to build X."
@@ -107,30 +136,30 @@ Ask Claude things like:
 - "Log this verdict and show me my idea journal."
 - "Reality check off" / "go ultra" — change the intensity.
 
-The skills hand off to each other: a validation can flow into a market scan, a
-pre-mortem, a roadmap, or a journal entry — so you can go as deep as the idea
-deserves.
-
 ## Repository layout
 
 ```
-.claude-plugin/
-  plugin.json          plugin manifest
-  marketplace.json     marketplace manifest (installable via /plugin marketplace add)
-hooks/
-  hooks.json           always-on honesty hook (UserPromptSubmit)
-skills/
-  validate-idea/       core engine + references/ (scoring rubric, idea-type playbooks)
-  market-scan/         live competitor & market research
-  pre-mortem/          structured failure-mode analysis
-  direction-roadmap/   sequenced de-risking plan
-  pitch-critique/      investor-grade pitch review
-  compare-ideas/       head-to-head ranking of multiple ideas
-  idea-journal/        persistent verdict log
-  reality-check-mode/  intensity control (off / lite / full / ultra)
-CHANGELOG.md
-LICENSE
+AGENTS.md                universal always-on ruleset (read by many agents)
+.claude-plugin/          plugin.json + marketplace.json (Claude)
+hooks/hooks.json         always-on honesty hook (UserPromptSubmit)
+skills/                  8 skills (validate-idea has references/)
+.cursor/ .windsurf/ .clinerules/ .github/ .kiro/ .agents/   per-host rule adapters
+examples/                before/after comparisons
+docs/agent-portability.md   file-to-agent mapping
+scripts/                 canonical ruleset + sync check
+benchmarks/              honest measurement method (no fabricated results)
+gemini-extension.json  package.json  CHANGELOG.md  LICENSE
 ```
+
+The ruleset is identical across every adapter, kept in sync by
+`scripts/check-rule-copies.sh`.
+
+## A note on honesty
+
+This plugin exists because agreeable AI can't validate a real idea. In that spirit:
+it ships no invented benchmark numbers, and its own effectiveness is unproven until
+measured (see `benchmarks/`). Use it, push back on it, and tune the ruleset from
+real output.
 
 ## License
 

@@ -3,6 +3,20 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.4.0] - 2026-06-30
+
+### Added
+- **Multi-host support.** One canonical ruleset is now mirrored into the file each
+  agent reads: `AGENTS.md` (Codex, OpenCode, Swival, CodeWhale, VS Code Codex),
+  `.cursor/rules/`, `.windsurf/rules/`, `.clinerules/`, `.github/copilot-instructions.md`,
+  `.kiro/steering/`, and `.agents/rules/`. Instruction-only hosts get the always-on
+  honesty behavior; Claude additionally gets the eight skills.
+- `gemini-extension.json` and `package.json` for Gemini/Antigravity and npm.
+- `examples/` — before/after comparisons on real prompts.
+- `docs/agent-portability.md` — which file maps to which agent.
+- `scripts/check-rule-copies.sh` — verifies every adapter matches the canonical ruleset.
+- `benchmarks/` — an honest measurement method (no fabricated results).
+
 ## [0.3.0] - 2026-06-30
 
 ### Added
