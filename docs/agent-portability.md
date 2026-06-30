@@ -8,7 +8,7 @@ by `scripts/check-rule-copies.sh`).
 | Agent / tool            | How to use                                         | File |
 | ----------------------- | -------------------------------------------------- | ---- |
 | Claude (Cowork desktop) | Add from repository in the plugin UI               | `.claude-plugin/` + `skills/` + `hooks/` |
-| Claude Code             | `/plugin marketplace add` then `/plugin install`   | `.claude-plugin/marketplace.json` |
+| Claude Code             | `/plugin marketplace add https://github.com/MrinallSamal-byte/Idea-Validater.git` then `/plugin install reality-check@idea-validater`   | `.claude-plugin/marketplace.json` |
 | Codex / VS Code Codex   | Auto-reads `AGENTS.md` at repo root                | `AGENTS.md` |
 | OpenCode / Swival       | Auto-reads `AGENTS.md`                              | `AGENTS.md` |
 | Cursor                  | Copy rules file into your project / global rules   | `.cursor/rules/reality-check.mdc` |

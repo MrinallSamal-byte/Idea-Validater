@@ -3,6 +3,15 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.5.2] - 2026-06-30
+
+### Fixed / portability
+- Install instructions now use the explicit HTTPS `.git` URL so `marketplace add`
+  never falls back to SSH on other machines; added a troubleshooting note for the
+  SSH host-key error.
+- Added `.gitattributes` to normalize line endings (LF) across operating systems.
+- Documented that no Node.js/runtime is required (the always-on hook is prompt-based).
+
 ## [0.5.1] - 2026-06-30
 
 ### Added

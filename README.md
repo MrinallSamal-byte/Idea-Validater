@@ -122,11 +122,13 @@ Enable **reality-check**. The always-on behavior starts immediately.
 ### Claude Code
 
 ```
-/plugin marketplace add MrinallSamal-byte/Idea-Validater
+/plugin marketplace add https://github.com/MrinallSamal-byte/Idea-Validater.git
 /plugin install reality-check@idea-validater
 ```
 
 (Send the two commands as separate messages.)
+
+> If you see **"SSH host key is not in your known_hosts"** or "Host key verification failed," you used the `owner/repo` shorthand, which resolves to SSH. Use the full `https://…​.git` URL above instead — no SSH setup needed for a public repo.
 
 ### Codex, OpenCode, Swival, CodeWhale, VS Code (Codex)
 
@@ -160,7 +162,7 @@ Or drop the ruleset into `.agents/rules/` for always-on context.
 cd Idea-Validater && zip -r /tmp/reality-check.plugin . -x "*.git*" -x "*.DS_Store"
 ```
 
-On any host: if plugin hooks aren't run, the always-on layer stays quiet and the skills still work on request.
+No Node.js or external runtime is required — the always-on hook is prompt-based. On any host: if plugin hooks aren't run, the always-on layer stays quiet and the skills still work on request.
 
 ## Usage
 
