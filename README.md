@@ -156,10 +156,12 @@ The ruleset is identical across every adapter, kept in sync by
 
 ## A note on honesty
 
-This plugin exists because agreeable AI can't validate a real idea. In that spirit:
-it ships no invented benchmark numbers, and its own effectiveness is unproven until
-measured (see `benchmarks/`). Use it, push back on it, and tune the ruleset from
-real output.
+This plugin exists because agreeable AI can't validate a real idea. In that spirit,
+`benchmarks/` ships a **reproducible demonstration** rather than impressive-looking
+marketing numbers — and says plainly that it is not yet an independent efficacy
+claim (same model authors both arms; rule-based grading; n=10). Re-run it with a
+different model and an external grader to make the numbers authoritative. Use the
+plugin, push back on it, and tune the ruleset from real output.
 
 ## License
 

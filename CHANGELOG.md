@@ -3,6 +3,14 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.4.1] - 2026-06-30
+
+### Added
+- **Benchmark harness** (`benchmarks/score.py`): deterministic scoring of a
+  baseline vs. ruleset arm over 10 ground-truth-labelled ideas, with a dated
+  results report. Documented honestly as a reproducible demonstration, not an
+  independent efficacy claim.
+
 ## [0.4.0] - 2026-06-30
 
 ### Added
