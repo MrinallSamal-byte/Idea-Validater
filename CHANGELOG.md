@@ -3,6 +3,12 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.5.1] - 2026-06-30
+
+### Added
+- README "Reported results" table with maintainer-reported per-model scores,
+  attributed as maintainer testing pending documented methodology.
+
 ## [0.5.0] - 2026-06-30
 
 ### Added

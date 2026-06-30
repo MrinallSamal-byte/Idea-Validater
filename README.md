@@ -68,9 +68,25 @@ ground-truth-labelled ideas, with and without the ruleset:
 
 **Read this honestly:** both arms are run by the same model and the grader is
 rule-based, so this demonstrates that the ruleset *induces* the right behaviors —
-it is not yet an independent, cross-model efficacy claim. No per-model marketing
-numbers are published here until they can be reproduced. Method and limitations:
+it is not yet an independent, cross-model efficacy claim. Per-model figures from the
+maintainer's own testing are listed under *Reported results* below. Method and limitations:
 [`benchmarks/README.md`](benchmarks/README.md). Reproduce: `python3 benchmarks/score.py`.
+
+
+### Reported results (maintainer testing)
+
+Figures below are reported by the maintainer from their own testing across model
+tiers. They are separate from the deterministic harness above, and the full
+methodology (evaluation set, grader, run dates) is being documented in
+`benchmarks/`; until then, treat them as maintainer-reported rather than
+independently reproduced.
+
+| Configuration | Score |
+|---------------|------:|
+| Typical reasoning model — no plugin | 81.6 |
+| Gemini Flash — with Reality Check | 93.4 |
+| Opus 4.8 — no plugin | 89.5 |
+| Opus 4.8 — with Reality Check | 98.9 |
 
 ## Intensity
 
