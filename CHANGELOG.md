@@ -3,6 +3,15 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.5.0] - 2026-06-30
+
+### Added
+- **CI** (`.github/workflows/validate.yml`): validates JSON manifests and skill
+  frontmatter, checks rule-adapter sync, and runs the benchmark on every push.
+- **`CONTRIBUTING.md`** with the ruleset-sync and honesty rules.
+- README now features the real, reproducible benchmark results (honestly framed)
+  and a CI status badge.
+
 ## [0.4.1] - 2026-06-30
 
 ### Added

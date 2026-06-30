@@ -1,6 +1,6 @@
 {
   "name": "reality-check",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Honest, always-on idea validator that resists sycophancy.",
   "contextFileName": "AGENTS.md"
 }

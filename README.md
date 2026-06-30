@@ -2,6 +2,9 @@
 
 *The advisor who's seen a thousand ideas and isn't impressed easily — living inside your AI.*
 
+![validate](https://github.com/MrinallSamal-byte/Idea-Validater/actions/workflows/validate.yml/badge.svg)
+
+
 Most assistants agree with whatever you propose. You say "I want to build X," they say "Great idea!" That feels nice and tells you nothing. Reality Check does the opposite: it pressure-tests the idea, looks up what's really happening in the market, names the ways it could fail, and tells you what to do next. It's direct by design, and — unlike a tool you have to remember to summon — it's **on by default**.
 
 ## Works with
@@ -50,6 +53,24 @@ Reality Check:
 > **Verdict: Reshape.** The summary is commoditized. If there's a business here it's in what happens *after* the summary - and that's the part you haven't defined.
 
 More in [`examples/`](examples/).
+
+## What changes, measured
+
+A deterministic harness (`benchmarks/`) scores the same model answering 10
+ground-truth-labelled ideas, with and without the ruleset:
+
+| Behavior | Without | With Reality Check |
+|----------|--------:|-------------------:|
+| Opens with empty praise (lower is better) | 100% | 0% |
+| Names the real, load-bearing flaw | 0% | 100% |
+| States the case against | 0% | 100% |
+| Commits to a verdict that matches ground truth | 0% | 100% |
+
+**Read this honestly:** both arms are run by the same model and the grader is
+rule-based, so this demonstrates that the ruleset *induces* the right behaviors —
+it is not yet an independent, cross-model efficacy claim. No per-model marketing
+numbers are published here until they can be reproduced. Method and limitations:
+[`benchmarks/README.md`](benchmarks/README.md). Reproduce: `python3 benchmarks/score.py`.
 
 ## Intensity
 
