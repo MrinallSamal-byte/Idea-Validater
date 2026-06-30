@@ -59,6 +59,8 @@ More in [`examples/`](examples/).
 A deterministic harness (`benchmarks/`) scores the same model answering 10
 ground-truth-labelled ideas, with and without the ruleset:
 
+![What Reality Check changes](assets/benchmark-behavior.svg)
+
 | Behavior | Without | With Reality Check |
 |----------|--------:|-------------------:|
 | Opens with empty praise (lower is better) | 100% | 0% |
@@ -80,6 +82,8 @@ tiers. They are separate from the deterministic harness above, and the full
 methodology (evaluation set, grader, run dates) is being documented in
 `benchmarks/`; until then, treat them as maintainer-reported rather than
 independently reproduced.
+
+![Reported scores across model tiers](assets/benchmark-models.svg)
 
 | Configuration | Score |
 |---------------|------:|

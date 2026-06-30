@@ -3,6 +3,13 @@
 All notable changes to Reality Check are documented here.
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.5.3] - 2026-06-30
+
+### Added
+- SVG benchmark charts (`assets/benchmark-behavior.svg`, `assets/benchmark-models.svg`)
+  generated from the data by `benchmarks/make_charts.py`, embedded in the README so
+  the visuals can never drift from the numbers. Tables retained for accessibility.
+
 ## [0.5.2] - 2026-06-30
 
 ### Fixed / portability

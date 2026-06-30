@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect width="820" height="470" rx="10" fill="#0d1117"/>
+<text x="64" y="34" fill="#f0f6fc" font-size="19" font-weight="600">Reported scores across model tiers</text>
+<text x="64" y="56" fill="#8b949e" font-size="12.5">Maintainer-reported testing · methodology pending documentation</text>
+<rect x="64" y="64" width="13" height="13" rx="2" fill="#6e7681"/>
+<text x="82" y="75" fill="#c9d1d9" font-size="12.5">Without plugin</text>
+<rect x="232" y="64" width="13" height="13" rx="2" fill="#2ea043"/>
+<text x="250" y="75" fill="#c9d1d9" font-size="12.5">With Reality Check</text>
+<line x1="64" y1="366.0" x2="796" y2="366.0" stroke="#30363d" stroke-width="1"/>
+<text x="56" y="370.0" fill="#8b949e" font-size="11" text-anchor="end">0</text>
+<line x1="64" y1="302.5" x2="796" y2="302.5" stroke="#30363d" stroke-width="1"/>
+<text x="56" y="306.5" fill="#8b949e" font-size="11" text-anchor="end">25</text>
+<line x1="64" y1="239.0" x2="796" y2="239.0" stroke="#30363d" stroke-width="1"/>
+<text x="56" y="243.0" fill="#8b949e" font-size="11" text-anchor="end">50</text>
+<line x1="64" y1="175.5" x2="796" y2="175.5" stroke="#30363d" stroke-width="1"/>
+<text x="56" y="179.5" fill="#8b949e" font-size="11" text-anchor="end">75</text>
+<line x1="64" y1="112.0" x2="796" y2="112.0" stroke="#30363d" stroke-width="1"/>
+<text x="56" y="116.0" fill="#8b949e" font-size="11" text-anchor="end">100</text>
+<rect x="132.5" y="158.7" width="46.0" height="207.3" rx="3" fill="#6e7681"/>
+<text x="155.5" y="152.7" fill="#c9d1d9" font-size="12" font-weight="600" text-anchor="middle">81.6%</text>
+<text x="155.5" y="386.0" fill="#c9d1d9" font-size="12" text-anchor="middle">Reasoning</text>
+<text x="155.5" y="402.0" fill="#c9d1d9" font-size="12" text-anchor="middle">(no plugin)</text>
+<rect x="315.5" y="128.8" width="46.0" height="237.2" rx="3" fill="#2ea043"/>
+<text x="338.5" y="122.8" fill="#c9d1d9" font-size="12" font-weight="600" text-anchor="middle">93.4%</text>
+<text x="338.5" y="386.0" fill="#c9d1d9" font-size="12" text-anchor="middle">Flash</text>
+<text x="338.5" y="402.0" fill="#c9d1d9" font-size="12" text-anchor="middle">+ Reality Check</text>
+<rect x="498.5" y="138.7" width="46.0" height="227.3" rx="3" fill="#6e7681"/>
+<text x="521.5" y="132.7" fill="#c9d1d9" font-size="12" font-weight="600" text-anchor="middle">89.5%</text>
+<text x="521.5" y="386.0" fill="#c9d1d9" font-size="12" text-anchor="middle">Opus 4.8</text>
+<text x="521.5" y="402.0" fill="#c9d1d9" font-size="12" text-anchor="middle">(no plugin)</text>
+<rect x="681.5" y="114.8" width="46.0" height="251.2" rx="3" fill="#2ea043"/>
+<text x="704.5" y="108.8" fill="#c9d1d9" font-size="12" font-weight="600" text-anchor="middle">98.9%</text>
+<text x="704.5" y="386.0" fill="#c9d1d9" font-size="12" text-anchor="middle">Opus 4.8</text>
+<text x="704.5" y="402.0" fill="#c9d1d9" font-size="12" text-anchor="middle">+ Reality Check</text>
+<text x="64" y="450" fill="#8b949e" font-size="11.5">Maintainer-reported. Treat as the maintainer's own measurements until the method is documented in benchmarks/.</text>
+</svg>
